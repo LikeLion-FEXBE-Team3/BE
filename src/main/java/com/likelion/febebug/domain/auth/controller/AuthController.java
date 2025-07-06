@@ -5,6 +5,7 @@ import com.likelion.febebug.domain.auth.dto.response.LoginResponse;
 import com.likelion.febebug.domain.auth.service.AuthService;
 import com.likelion.febebug.global.Response.BaseResponse;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/auth")
 @RestController
 @RequiredArgsConstructor
+@Tag(name = "Auth", description = "Auth 관리 API")
 public class AuthController {
 
   private final AuthService authService;
