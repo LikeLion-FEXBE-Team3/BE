@@ -1,0 +1,17 @@
+package com.likelion.febebug.domain.user.dto.response;
+
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
+@Builder
+@Schema(title = "SignUpResponse DTO", description = "사용자 회원가입에 대한 응답 반환")
+public class SignUpResponse {
+
+  @Schema(description = "회원가입된 사용자 ID", example = "1")
+  private Long userId;
+
+  @Schema(description = "회원가입된 사용자 이메일", example = "naooung@naver.com")
+  private String email;
+}
