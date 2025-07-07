@@ -15,6 +15,7 @@ public class CommentMapper {
         .postId(comment.getPost().getId())
         .content(comment.getContent())
         .writer(comment.getWriter())
+        .createdAt(comment.getCreatedAt())
         .build();
   }
 
