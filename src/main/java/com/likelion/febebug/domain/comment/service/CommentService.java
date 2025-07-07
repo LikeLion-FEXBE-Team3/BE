@@ -7,6 +7,8 @@ import com.likelion.febebug.domain.comment.exception.CommentErrorCode;
 import com.likelion.febebug.domain.comment.mapper.CommentMapper;
 import com.likelion.febebug.domain.comment.repository.CommentRepository;
 import com.likelion.febebug.domain.post.entity.Post;
+import com.likelion.febebug.domain.post.exception.PostErrorCode;
+import com.likelion.febebug.domain.post.repository.PostRepository;
 import com.likelion.febebug.global.exception.CustomException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

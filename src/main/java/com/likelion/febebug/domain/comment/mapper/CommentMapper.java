@@ -3,7 +3,9 @@ package com.likelion.febebug.domain.comment.mapper;
 import com.likelion.febebug.domain.comment.dto.response.CommentResponse;
 import com.likelion.febebug.domain.comment.entity.Comment;
 import java.util.List;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CommentMapper {
 
   public CommentResponse toCommentResponse(Comment comment) {

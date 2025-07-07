@@ -4,7 +4,12 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 import java.util.Date;
+import lombok.Builder;
+import lombok.Getter;
 
+@Getter
+@Builder
+@Schema(title = "CommentResponse DTO", description = "댓글에 대한 응답 반환")
 public class CommentResponse {
 
   @Schema(description = "댓글 ID", example = "1")
