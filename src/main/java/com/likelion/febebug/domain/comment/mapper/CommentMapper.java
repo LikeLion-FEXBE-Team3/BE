@@ -18,9 +18,9 @@ public class CommentMapper {
         .build();
   }
 
-  public List<CommentResponse> toCommnetResponseList(List<Comment> commnetList) {
+  public List<CommentResponse> toCommentResponseList(List<Comment> commentList) {
 
-    return commnetList.stream()
+    return commentList.stream()
         .map(this::toCommentResponse)
         .toList();
   }

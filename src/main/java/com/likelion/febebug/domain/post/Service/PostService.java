@@ -51,6 +51,9 @@ public class PostService {
         .orElseThrow(() -> new CustomException(PostErrorCode.POST_NOT_FOUND));
     post.increaseViews();
     log.info("[서비스] 게시글 조회: id={}", id);
+
+
+
     return postMapper.toPostResponse(post);
   }
 

@@ -10,6 +10,7 @@ import com.likelion.febebug.domain.post.entity.Post;
 import com.likelion.febebug.domain.post.exception.PostErrorCode;
 import com.likelion.febebug.domain.post.repository.PostRepository;
 import com.likelion.febebug.global.exception.CustomException;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -45,5 +46,12 @@ public class CommentService {
     commentRepository.save(comment);
 
     return commentMapper.toCommentResponse(comment);
+  }
+
+  public List<CommentResponse> getComments(Long postId) {
+
+    List<Comment> comments = commentRepository.findByPostId(postId);
+
+    return commentMapper.toCommentResponseList(comments);
   }
 }

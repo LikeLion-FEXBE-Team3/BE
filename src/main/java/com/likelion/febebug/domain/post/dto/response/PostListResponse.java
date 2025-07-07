@@ -1,5 +1,6 @@
 package com.likelion.febebug.domain.post.dto.response;
 
+import com.likelion.febebug.domain.comment.dto.response.CommentResponse;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.List;
 import lombok.Builder;
@@ -12,4 +13,6 @@ public class PostListResponse {
 
   @Schema(description = "음식 응답 리스트")
   private List<PostResponse> posts;
+
+  private List<CommentResponse> comments;
 }

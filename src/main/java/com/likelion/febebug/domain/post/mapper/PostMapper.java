@@ -26,5 +26,4 @@ public class PostMapper {
         .posts(posts.stream().map(this::toPostResponse).toList())
         .build();
   }
-
 }
