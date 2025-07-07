@@ -1,8 +1,12 @@
 package com.likelion.febebug.domain.post.dto.response;
 
+import com.likelion.febebug.domain.comment.dto.response.CommentResponse;
+import com.likelion.febebug.domain.comment.entity.Comment;
 import com.likelion.febebug.domain.post.entity.Genre;
+import com.likelion.febebug.domain.post.entity.Post;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.LocalDateTime;
+import java.util.List;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -34,4 +38,7 @@ public class PostResponse {
 
   @Schema(description = "게시글 조회수", example = "123")
   private Long views;
+
+  @Schema(description = "댓글 리스트 조회")
+  private List<CommentResponse> comments;
 }

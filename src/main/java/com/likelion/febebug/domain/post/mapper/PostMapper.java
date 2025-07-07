@@ -1,5 +1,7 @@
 package com.likelion.febebug.domain.post.mapper;
 
+import com.likelion.febebug.domain.comment.mapper.CommentMapper;
+import com.likelion.febebug.domain.comment.service.CommentService;
 import com.likelion.febebug.domain.post.dto.response.PostListResponse;
 import com.likelion.febebug.domain.post.dto.response.PostResponse;
 import com.likelion.febebug.domain.post.entity.Post;
@@ -8,6 +10,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PostMapper {
+
+  private final CommentService commentService;
+
+  public PostMapper(CommentService commentService) {
+    this.commentService = commentService;
+  }
+
   public PostResponse toPostResponse(Post post) {
     return PostResponse.builder()
         .id(post.getId())
@@ -18,6 +27,7 @@ public class PostMapper {
         .imageUrl(post.getImageUrl())
         .createdAt(post.getCreatedAt())
         .views(post.getViews().longValue())
+        .comments(commentService.getComments(post.getId()))
         .build();
   }
 

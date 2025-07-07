@@ -19,7 +19,7 @@ public class CommentResponse {
   private Long postId;
 
   @Schema(description = "댓글 생성일시", example = "2024-07-07")
-  private LocalDateTime createAt;
+  private LocalDateTime createdAt;
 
   @Schema(description = "댓글 내용", example = "노래 좋아요!")
   private String content;
